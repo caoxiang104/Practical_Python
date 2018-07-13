@@ -1,3 +1,4 @@
+# o(n)
 from collections import defaultdict
 
 

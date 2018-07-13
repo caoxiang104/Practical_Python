@@ -1,4 +1,4 @@
-# O(n log(n))
+# O(nlog(n))
 def merge_sort(seq):
     mid = len(seq) // 2
     lft, rgt = seq[:mid], seq[mid:]

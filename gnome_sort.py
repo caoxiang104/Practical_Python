@@ -1,4 +1,5 @@
-def genomesort(seq):
+# O(n^2)
+def genome_sort(seq):
     i = 0
     while i < len(seq):
         if i == 0 or seq[i - 1] <= seq[i]:
@@ -10,7 +11,7 @@ def genomesort(seq):
 
 def main():
     seq = [1, 5, 3, 4, 6, 2]
-    genomesort(seq)
+    genome_sort(seq)
     print("".join(str(seq)))
 
 

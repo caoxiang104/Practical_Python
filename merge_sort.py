@@ -1,10 +1,11 @@
-def mergesort(seq):
+# O(n log(n))
+def merge_sort(seq):
     mid = len(seq) // 2
     lft, rgt = seq[:mid], seq[mid:]
     if len(lft) > 1:
-        mergesort(lft)
+        merge_sort(lft)
     if len(rgt) > 1:
-        mergesort(rgt)
+        merge_sort(rgt)
     i = 0
     j = 0
     k = 0
@@ -30,7 +31,7 @@ def mergesort(seq):
 
 def main():
     seq = [1, 5, 3, 4, 6, 2]
-    seq = mergesort(seq)
+    seq = merge_sort(seq)
     print("".join(str(seq)))
 
 

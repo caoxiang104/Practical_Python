@@ -16,7 +16,7 @@ def naive_celeb(g):
 
 
 def main():
-    n = 10
+    n = 12
     g = [[randrange(2) for i in range(n)] for i in range(n)]
     c = randrange(n)
     for i in range(n):

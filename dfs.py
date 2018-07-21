@@ -17,7 +17,7 @@ def main():
     g = [[b, c, d, e, f], [c, e], [d], [e], [f], [g, h], [f, h], [f, g]]
     d = defaultdict()
     f = defaultdict()
-    print(dfs(g, a, d, f))
+    print(dfs(g, b, d, f))
     print(d)
     print(f)
 

@@ -12,7 +12,7 @@ def iter_dfs(G, s):
 def main():
     a, b, c, d, e, f, g, h = range(8)
     g = [[b, c, d, e, f], [c, e], [d], [e], [f], [g, h], [f, h], [f, g]]
-    print(list(iter_dfs(g, a)))
+    print(list(iter_dfs(g, b)))
 
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ def quick_sort(seq):
 
 
 def main():
-    a = [i for i in range(10)]
+    a = [i for i in range(12)]
     shuffle(a)
     print(quick_sort(a))
 

@@ -21,7 +21,7 @@ def min_point_pair(seq, low, high):
 
 
 def main():
-    a = [2, 20, 200, 500, 499, 40, 10, 50]
+    a = [2, 20, 200, 500, 499, 40, 10, 50, 51]
     print(min_point_pair(a, 0, len(a) - 1))
 
 

@@ -19,9 +19,9 @@ def select(seq, k):
 
 
 def main():
-    a = [i for i in range(10)]
+    a = [i for i in range(12)]
     shuffle(a)
-    print(select(a, 5))
+    print(select(a, 6))
 
 
 if __name__ == '__main__':

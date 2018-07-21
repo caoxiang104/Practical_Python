@@ -22,7 +22,7 @@ def iddfs(G, s):
 def main():
     a, b, c, d, e = range(5)
     g = [[d], [a, c], [d, e], [e], []]
-    print(list(iddfs(g, b)))
+    print(list(iddfs(g, a)))
 
 
 if __name__ == '__main__':

@@ -37,6 +37,17 @@ def coin(coin_num, s, dp):
     return dp
 
 
+def find_coin(coin_num, dp, s):
+    co = []
+    while s:
+        for j in range(len(coin_num)):
+            if dp[s] == dp[s - coin_num[j]] + 1:
+                co.append(coin_num[j])
+                s -= coin_num[j]
+                break
+    return co
+
+
 def main():
     coin_num = input()
     coin_num = list(map(int, coin_num.split()))  # 币种
@@ -44,6 +55,7 @@ def main():
     num = [0 for i in range(s + 1)]
     dp = coin(coin_num, s, num)
     print(dp[s])
+    print(find_coin(coin_num, dp, s))
 
 
 if __name__ == '__main__':

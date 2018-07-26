@@ -47,21 +47,21 @@ def lis_len3(seq_a, dp3, min_in_max):
     dp3[0] = 1
     min_in_max[0] = seq_a[0]
     for i in range(1, len_a):
-        if seq_a[i] >= min_in_max[dp3[i - 1]]:
+        if seq_a[i] >= min_in_max[dp3[i - 1] - 1]:
             dp3[i] = dp3[i - 1] + 1
-            min_in_max[dp3[i]] = seq_a[i]
+            min_in_max[dp3[i] - 1] = seq_a[i]
         else:
             dp3[i] = dp3[i - 1]
             low = 0
             high = dp3[i - 1] - 1
             mid = (low + high) // 2
             while low <= high:
-                if seq_a[i] <= min_in_max[mid]:
+                if seq_a[i] < min_in_max[mid]:
                     high = mid - 1
                 else:
                     low = mid + 1
                 mid = (low + high) // 2
-            min_in_max[low + 1] = seq_a[i]
+            min_in_max[low] = seq_a[i]
     return dp3[len(seq_a) - 1]
 
 
